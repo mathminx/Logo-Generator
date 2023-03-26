@@ -1,7 +1,9 @@
 // Import packages needed for this application
+const fs = require('fs');
 const inquirer = require("inquirer");
-const Logo = require ("./lib/shapes");
+const {Circle, Square, Triangle} = require ("./lib/shapes");
 
+//Get user input
 const questions = [
   {
     type: "input",
@@ -26,34 +28,24 @@ const questions = [
   },
 ];
 
+
 // Use  to generate the logo
-function generateLogo (data) {
+function generateShape (data) {
   if (data.shape === 'Circle') {
-    const myLogo = new Logo.Circle (
-      data.text,
-      data.shapeColour,
-      data.textColour
-    );
-    console.log(myLogo);
+    const logoShape = new Circle(data.shapeColour);
+    console.log(logoShape.render());
   }
   else if (data.shape === 'Square') {
-    const myLogo = new Logo.Square (
-      data.text,
-      data.shapeColour,
-      data.textColour
-    );
-    console.log(myLogo);
+    const logoShape = new Square (data.shapeColour);
+    console.log(logoShape.render());
   }
   else {
-    const myLogo = new Logo.Triangle (
-      data.text,
-      data.shapeColour,
-      data.textColour
-    );
-    console.log(myLogo);
+    const logoShape = new Triangle (data.shapeColour);
+    console.log(logoShape.render());
   }
   
-  //const html = myLogo.render();
+ //const html = myLogo.render();
+ // console.log("Generated logo.svg");
 }
 
 // Function to initialize the application
@@ -61,9 +53,7 @@ function init() {
   inquirer
     .prompt(questions)
     .then((data) => {
-      console.log(data);
-      generateLogo(data);
-      console.log("Generated logo.svg")
+      generateShape(data);
   });
 }
 
