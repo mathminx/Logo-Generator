@@ -24,28 +24,51 @@ const questions = [
   {
     type: "input",
     message: "Choose a colour for the text.",
+
     name: "textColour",
   },
 ];
 
 
-// Use  to generate the logo
-function generateShape (data) {
-  if (data.shape === 'Circle') {
-    const logoShape = new Circle(data.shapeColour);
-    console.log(logoShape.render());
+// Generate a string for the selected shape 
+// in the selected colour. 
+function renderShape (shape, shapeColour) {
+  if (shape === 'Circle') {
+    const logoShape = new Circle(shapeColour);
+    const renderedShape = (logoShape.render());
+    return renderedShape;
   }
-  else if (data.shape === 'Square') {
-    const logoShape = new Square (data.shapeColour);
-    console.log(logoShape.render());
+  if (shape === 'Square') {
+    const logoShape = new Square(shapeColour);
+    const renderedShape = (logoShape.render());
+    return renderedShape;
   }
-  else {
-    const logoShape = new Triangle (data.shapeColour);
-    console.log(logoShape.render());
+  if (shape === 'Triangle'){
+    const logoShape = new Triangle(shapeColour);
+    const renderedShape = (logoShape.render());
+    return renderedShape;
   }
-  
- //const html = myLogo.render();
- // console.log("Generated logo.svg");
+}
+
+function renderText (shape, text, textColour) {
+  if (shape === 'Circle') {
+    const renderedText = `<text x="150" y="118" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
+  }
+  if (shape === 'Square') {
+    const renderedText = `<text x="150" y="120" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
+  }
+  if (shape === 'Triangle'){
+    return renderedText = `<text x="150" y="165" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
+  }
+}
+
+function renderLogo (data) {
+  const renderedShape = renderShape(data.shape, data.shapeColour);
+  const renderedText = renderText(data.shape, data.text, data.textColour);
+  const logoString = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${renderedShape}${renderedText}`
+  fs.writeFile('logo.svg', logoString, (err) =>
+    err ? console.error(err) : console.log("Generated logo.svg")
+  );
 }
 
 // Function to initialize the application
@@ -53,8 +76,8 @@ function init() {
   inquirer
     .prompt(questions)
     .then((data) => {
-      generateShape(data);
-  });
+      renderLogo(data);
+    });
 }
 
 // Function call to initialize app
