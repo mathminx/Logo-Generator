@@ -52,10 +52,10 @@ function renderShape (shape, shapeColour) {
 
 function renderText (shape, text, textColour) {
   if (shape === 'Circle') {
-    const renderedText = `<text x="150" y="118" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
+    return renderedText = `<text x="150" y="118" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
   }
   if (shape === 'Square') {
-    const renderedText = `<text x="150" y="120" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
+    return renderedText = `<text x="150" y="120" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
   }
   if (shape === 'Triangle'){
     return renderedText = `<text x="150" y="165" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
