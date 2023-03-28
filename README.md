@@ -16,20 +16,25 @@ node index.js
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
 
   ## Installation
   
-  Install dependencies by running `npm install` followed by `npm i inquirer@8.2.4`.
+  Install dependencies by running `npm install`.
 
   ## Usage
 
   The application is invoked by running the following command: `node index.js`
   
-  ## Credits
-  Starter code was provided.
+  
+  ## Tests
 
+  Unit tests for the creation of the shapes can be found in shapes.tests.js and run using Jest. To run the tests, type 
+  ```bash
+  npm run test
+  ```
+  
+  
   ## License
     
   This project is licensed under the terms of the MIT license.
