@@ -27,7 +27,7 @@ This is a Node.js command-line application that takes in user input to generate 
  
 ## Installation
   
-Install dependencies by running `npm install`.
+Install dependencies by running `npm install` followed by `npm i inquirer@8.2.4`.
 
 
 ## Usage
