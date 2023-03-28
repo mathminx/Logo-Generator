@@ -1,4 +1,4 @@
-SVG Logo Maker
+# SVG Logo Maker
 
 This is a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to provide text (maximum 3 characters), select a shape (circle, square, or triangle) and specify two colours - one for the shape and one for the text. Based on the user input, the application generates a string that defines the logo and saves it to a 'logo.svg' file.
 
