@@ -15,9 +15,7 @@ This is a Node.js command-line application that takes in user input to generate 
 - input for all the prompts --> an SVG file is created named `logo.svg` AND output text "Generated logo.svg" is printed in the command line
 - open the `logo.svg` file in a browser --> a 300x200 pixel image matching the criteria entered is displayed
 
-```bash
-node index.js
-```
+
 
   ## Table of Contents
   * [Installation](#installation)
@@ -25,11 +23,13 @@ node index.js
   * [Tests](#tests)
   * [License](#license)
 
-  ## Installation
+ 
+ ## Installation
   
   Install dependencies by running `npm install`.
 
-  ## Usage
+
+## Usage
 
   The application is invoked by running the following command: `node index.js`
   
@@ -37,9 +37,7 @@ node index.js
   ## Tests
 
   Unit tests for the creation of the shapes can be found in shapes.tests.js and run using Jest. To run the tests, type 
-  ```bash
-  npm run test
-  ```
+  `npm run test`
   
   
   ## License
