@@ -16,6 +16,7 @@ node index.js
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Tests](#tests)
   * [License](#license)
 
   ## Installation
