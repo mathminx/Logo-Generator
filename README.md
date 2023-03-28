@@ -2,7 +2,8 @@
 
 This is a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to provide text (maximum 3 characters), select a shape (circle, square, or triangle) and specify two colours - one for the shape and one for the text. Based on the user input, the application generates a string that defines the logo and saves it to a 'logo.svg' file.
 
-![image](https://user-images.githubusercontent.com/122234007/228095030-553a004d-f273-416e-903d-ad5871a0d8c3.png)
+![image](https://user-images.githubusercontent.com/122234007/228095030-553a004d-f273-416e-903d-ad5871a0d8c3.png)![image](https://user-images.githubusercontent.com/122234007/228095164-4aab6493-5a53-4cfe-9bf6-58c671b9f80c.png)
+
 
 
 *** insert video link here ***
