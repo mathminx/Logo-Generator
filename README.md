@@ -19,8 +19,7 @@ Install dependencies by running `npm install` followed by `npm i inquirer@8.2.4`
 
 ## Usage
 
-
-https://drive.google.com/file/d/1gTl2ucNXKWghdP0LxhE0rEluYlCmkhl1/view?usp=share_link
+https://watch.screencastify.com/v/cDiv11qbhrJSEBzs7Dx0
 
 
 The application is invoked by running the following command: `node index.js`
