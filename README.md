@@ -22,10 +22,10 @@ Install dependencies by running `npm install` followed by `npm i inquirer@8.2.4`
 https://watch.screencastify.com/v/cDiv11qbhrJSEBzs7Dx0
 
 
-The application is invoked by running the following command: `node index.js
+The application is invoked by running the following command: `node index.js`.
 The user is prompted to input text for the logo (maximum 3 characters), select a shape from a list (circle, square, or triangle) and specify two colours (colour keyword OR a hexadecimal number) - one colour for the shape and another for the text. 
-Based on the user input, the application generates a string that defines the logo, saves it to an SVG file (logo.svg'), and prints "Generated logo.svg" in the command line.
-When the `logo.svg` file i opened in a browser, a 300x200 pixel image matching the criteria entered is displayed
+Based on the user input, the application generates a string that defines the logo, saves it to an SVG file `(logo.svg)`, and prints `Generated logo.svg` in the command line.
+When the `logo.svg` file is opened in a browser, a 300x200 pixel image matching the criteria entered is displayed
 
 
 ## Tests
