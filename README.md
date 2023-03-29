@@ -1,6 +1,6 @@
 # SVG Logo Maker
 
-This is a Node.js command-line application that prompts the user to input text and select the shape and colours, then generates a logo based on the user input and saves it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The samples below were created with this SVG Logo Maker (see ./examples)
+This is a Node.js command-line application that prompts the user to input text and select the shape and colours, then generates a logo based on the user input and saves it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The samples below were created with this SVG Logo Maker (see [./examples](https://github.com/mathminx/SVG-Logo-Maker/tree/main/examples))
 
 ![image](https://user-images.githubusercontent.com/122234007/228095030-553a004d-f273-416e-903d-ad5871a0d8c3.png) ![image](https://user-images.githubusercontent.com/122234007/228095164-4aab6493-5a53-4cfe-9bf6-58c671b9f80c.png) ![image](https://user-images.githubusercontent.com/122234007/228095279-ebe46aef-2dca-4f83-9072-2e302584b6d5.png)
 
