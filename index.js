@@ -2,69 +2,17 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
 const {Circle, Square, Triangle} = require ("./lib/shapes");
+const questions = require ("./lib/questions");
+const render = require ("./lib/renderShape");
+const renderText = require ("./lib/renderText");
 
-//Get user input
-const questions = [
-  {
-    type: "input",
-    message: "Input up to three characters for your logo text.",
-    name: "text",
-  },
-  {
-    type: "list",
-    message: "Choose a shape for your logo.",
-    name: "shape",
-    choices: ["Circle", "Square", "Triangle"],
-  },
-  {
-    type: "input",
-    message: "Choose a colour for the shape.",
-    name: "shapeColour",
-  },
-  {
-    type: "input",
-    message: "Choose a colour for the text.",
-
-    name: "textColour",
-  },
-];
-
-
-// Generate a string for the selected shape 
-// in the selected colour. 
-function renderShape (shape, shapeColour) {
-  if (shape === 'Circle') {
-    const logoShape = new Circle(shapeColour);
-    const renderedShape = (logoShape.render());
-    return renderedShape;
-  }
-  if (shape === 'Square') {
-    const logoShape = new Square(shapeColour);
-    const renderedShape = (logoShape.render());
-    return renderedShape;
-  }
-  if (shape === 'Triangle'){
-    const logoShape = new Triangle(shapeColour);
-    const renderedShape = (logoShape.render());
-    return renderedShape;
-  }
-}
-
-function renderText (shape, text, textColour) {
-  if (shape === 'Circle') {
-    return renderedText = `<text x="150" y="118" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
-  }
-  if (shape === 'Square') {
-    return renderedText = `<text x="150" y="120" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
-  }
-  if (shape === 'Triangle'){
-    return renderedText = `<text x="150" y="165" font-size="60" text-anchor="middle" fill="${textColour}">${text}</text></svg>`;
-  }
-}
-
+// Function to render the logo
 function renderLogo (data) {
-  const renderedShape = renderShape(data.shape, data.shapeColour);
+  // Render the shape with the chosen colour
+  const renderedShape = render(data.shape, data.shapeColour);
+  // Render the text with the chosen colour
   const renderedText = renderText(data.shape, data.text, data.textColour);
+  // Link the SVG namespace, define the logo container, and concatenate to the strings defining the shape and text of the logo
   const logoString = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${renderedShape}${renderedText}`
   fs.writeFile('logo.svg', logoString, (err) =>
     err ? console.error(err) : console.log("Generated logo.svg")
